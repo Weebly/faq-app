@@ -12,6 +12,10 @@
 			"version": "1.0.0",
 			"settings": {
 				"config": {
+					"external": {
+						"url": "http://weebly.com",
+						"label": "Check out Weebly."
+					},
 					"autopop": false
 				},
 				"properties": [
