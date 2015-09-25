@@ -1,14 +1,12 @@
-<div class="faqs {{theme}}">
-	<ul class="faqs-ul">
-	{{#items_each}}	
-		<li class="faqs-li">
-			<div class="faqs-item-title">
-				{title_{{items_index}}:text default="Question {{items_index}}"}
-			</div>
-			<div class="faqs-item-content">
-				{content_{{items_index}}:text default="Answer to question {{items_index}}"}
-			</div>
-		</li>
-	{{/items_each}}
-	</ul>
+<div class="accordion accordion--{{style}}">
+    {{#items_each}} 
+        <div class="accordion__item">
+            <div class="accordion__title">
+                <span>{title_{{items_index}}:text default="Question {{items_index}}"}<span>
+            </div>
+            <div class="accordion__content">
+                {content_{{items_index}}:text default="Answer to question {{items_index}}"}
+            </div>
+        </div>
+    {{/items_each}}
 </div>
