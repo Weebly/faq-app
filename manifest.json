@@ -58,14 +58,14 @@
                 "name": "title_background",
                 "label": "Title Background",
                 "type": "color",
-                "default": "#F9F9FA",
+                "default": "#E0E0E0",
                 "hidden": true
               },
               {
                 "name": "content_background",
                 "label": "Content Background",
                 "type": "color",
-                "default": "#FFFFF",
+                "default": "#FAFAFA",
                 "hidden": true
               }
             ]
