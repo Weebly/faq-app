@@ -1,7 +1,6 @@
 {
   "manifest": "1",
   "version": "1.0.0",
-  "client_id": "1985634854",
   "locale": {
     "default": "en-us",
     "supported": [
@@ -11,16 +10,10 @@
   "elements": [
     {
       "path": "files",
-      "name": "FAQ",
+      "name": "Accordion",
       "version": "1.0.0",
       "settings": {
-        "config": {
-          "external": {
-            "url": "http://weebly.com",
-            "label": "Check out Weebly."
-          },
-          "autopop": false
-        },
+        "config": {},
         "properties": [
           {
             "type": "group",
@@ -33,13 +26,14 @@
                 "type": "int",
                 "default": 3,
                 "min": "1",
-                "max": "100"
+                "max": "100",
+                "step": 1
               },
               {
                 "name": "style",
                 "label": "Style",
                 "type": "select",
-                "default": "standard",
+                "default": "simple",
                 "values": [
                   {
                     "name": "Simple",
