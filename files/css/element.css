@@ -34,11 +34,10 @@
 .paragraph {
     padding: 0 !important;
     margin: 0 !important;
-    line-height: @title-height;
 }
 
 .editable-text {
-    line-height: @title-height;
+    // line-height: @title-height;
 }
 
 .accordion {
@@ -82,6 +81,10 @@
 
             span {
                 opacity: 0.5;
+
+                .paragraph {
+                    line-height: @title-height;
+                }
             }
             
             &::after {
