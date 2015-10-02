@@ -40,24 +40,46 @@
         setupAccordion: function() {
             var view = this;
 
-            this.$el.find('.accordion__title').click(function() {
+            this.$el.find('.accordion__title').on('touchstart click', function(e) {
+                // remove "hover" state on touch events
+                if(e.type == "touchstart") {
+                    view.$el.find('.accordion').removeClass('no-touch');
+                }
+
+                e.stopPropagation();
+                e.preventDefault();
+                
                 var isActive = $(this).parent().hasClass('active');
 
+                // handles closing
                 view.$el.find('.accordion__title').each(function() {
-                    $(this).parent().removeClass('active');
+                    var $this = $(this);
                     var $next = $(this).next();
+                    var eachIsActive = $(this).parent().hasClass('active');
+
                     $next.css({
                         'max-height': 0 + 'px'
                     });
+                    if(eachIsActive) {
+                        setTimeout(function() {
+                            $this.parent().removeClass('active');
+                        }, 250);
+                    }
                 });
 
+                // handles opening
                 if (!isActive) {
                     $(this).parent().addClass('active');
                     var $next = $(this).next();
+
                     $next.css({
                         'max-height': $next[0].scrollHeight + 20 + 'px' // 20 to compensate for padding
                     });
                 }
+            });
+
+            this.$el.find('.accordion__title').on('touchend', function() {
+                view.$el.find('.accordion').addClass('no-touch');
             });
         },
 
