@@ -74,7 +74,7 @@
          */
         setOpen: function() {
             /**
-             * "NA" is the identifier that no items
+             * "-1" is the identifier that no items
              * were open at page load
              */
             if (this.activeIndex != '-1') {
