@@ -18,7 +18,15 @@
         setupAccordion: function() {
             var view = this;
 
-            this.$el.find('.accordion__title').on('touchstart click', function(e) {
+            $titles = this.$el.find('.accordion__title');
+            $events = $._data($titles[0], "events");
+
+            // if we already have set up click events, don't set more up
+            if ($events && $events.click && $events.click[0]) {
+                return;
+            }
+
+            $titles.on('touchstart click', function(e) {
                 // remove "hover" state on touch events
                 if (e.type == "touchstart") {
                     view.$el.find('.accordion').removeClass('no-touch');
