@@ -1,4 +1,4 @@
-#FAQ 
+#FAQ (this is a great project)
 
 Add a dedicated FAQ section to your website.
 
